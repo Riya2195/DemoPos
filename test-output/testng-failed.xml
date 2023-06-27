@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="com.DemoPos.Listeners.TestListeners"/>
+  </listeners>
+  <test name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.DemoPos.Script.LoginTest">
+        <methods>
+          <include name="verifySigninValidUserValidpass" invocation-numbers="0"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.DemoPos.Script.LoginTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
