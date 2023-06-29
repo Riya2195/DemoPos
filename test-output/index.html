@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -20,25 +21,25 @@
      -->
   </head>
 
-  <body>
-    <div class="top-banner-root">
+  <body>    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+            <a href="#" panel-name="suite-Suite" class="navigator-link">
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\aibin\eclipse-workspace\DemoPos\grouping.xml</span>
+                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
+                    <span>C:\Users\aibin\eclipse-workspace\DemoPos\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                  <a href="#" panel-name="group-Suite" class="navigator-link ">
                     <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                  <a href="#" panel-name="times-Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +92,80 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">11 methods,  1 skipped,  10 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.DemoPos.Script.LoginTest" hash-for-method="verifySigninValidUserValidpass(admin, 123123)">verifySigninValidUserValidpass(admin, 123123)</a> <!-- method navigator-link -->
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.DemoPos.Script.RolesTest" class="method navigator-link" hash-for-method="verifyDeleteRole">verifyDeleteRole</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    </div> <!-- method-list-content skipped suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.DemoPos.Script.RolesTest" class="method navigator-link" hash-for-method="verifyAddNewRole">verifyAddNewRole</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.DemoPos.Script.RolesTest" class="method navigator-link" hash-for-method="verifyDeleteRole">verifyDeleteRole</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.DemoPos.Script.ContactsTest" class="method navigator-link" hash-for-method="verifyEditCostumerGroup">verifyEditCostumerGroup</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.DemoPos.Script.ContactsTest" class="method navigator-link" hash-for-method="verifyFileUpload">verifyFileUpload</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.DemoPos.Script.HomeTest" class="method navigator-link" hash-for-method="verifyPurchasePaymentDueList">verifyPurchasePaymentDueList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.DemoPos.Script.LoginTest" class="method navigator-link" hash-for-method="verifySigninInvalidUserInvalidpass(riya, 1223)">verifySigninInvalidUserInvalidpass(riya, 1223)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.DemoPos.Script.LoginTest" class="method navigator-link" hash-for-method="verifySigninInvalidUserValidpass(rynku, 123123)">verifySigninInvalidUserValidpass(rynku, 123123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.DemoPos.Script.LoginTest" class="method navigator-link" hash-for-method="verifySigninValidUserInvalidpass(admin, 10)">verifySigninValidUserInvalidpass(admin, 10)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.DemoPos.Script.LoginTest" class="method navigator-link" hash-for-method="verifySigninValidUserValidpass(admin, 123123)">verifySigninValidUserValidpass(admin, 123123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.DemoPos.Script.UsersTest" class="method navigator-link" hash-for-method="verifyenterFirstName">verifyenterFirstName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,27 +177,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.DemoPos.Script.LoginTest</span>
+              <img src="skipped.png"/>
+              <span class="class-name">com.DemoPos.Script.RolesTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySigninValidUserValidpass(admin, 123123)">
-                  </a> <!-- verifySigninValidUserValidpass(admin, 123123) -->
-                  <span class="method-name">verifySigninValidUserValidpass</span>
-                  <span class="parameters">(admin, 123123)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;Welcome admin,&apos;)]&quot;}
+                  <a name="verifyDeleteRole">
+                  </a> <!-- verifyDeleteRole -->
+                  <span class="method-name">verifyDeleteRole</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
   (Session info: chrome=114.0.5735.134)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
 Build info: version: &apos;4.9.0&apos;, revision: &apos;d7057100a6&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_361&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.19&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8e9051987e655c5c7f2dab89d8ae1b6, findElement {using=xpath, value=//*[contains(text(),&apos;Welcome admin,&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\aibin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61103}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61103/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8e9051987e655c5c7f2dab89d8ae1b6
+Command: [778150e6fd286fa990f35144b19eb072, getElementText {id=899537EE28FEF61A2544D3DA42C3A6DF_element_396}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:63790}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63790/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on WINDOWS (778150e6fd286fa990f35144b19eb072)] -&gt; xpath: //table[@id=&quot;roles_table&quot;]/tbody/tr]] -&gt; tag name: td]
+Session ID: 778150e6fd286fa990f35144b19eb072
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -145,46 +205,175 @@ Session ID: a8e9051987e655c5c7f2dab89d8ae1b6
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy17.getText(Unknown Source)
-	at com.DemoPos.Pages.LoginPage.welcomeMessage(LoginPage.java:54)
-	at com.DemoPos.Script.LoginTest.verifySigninValidUserValidpass(LoginTest.java:67)
-... Removed 29 stack frames
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:207)
+	at com.DemoPos.Utilities.WebTableUtilities.webTableHandleDeleteElement(WebTableUtilities.java:33)
+	at com.DemoPos.Pages.RolesPage.deleteRole(RolesPage.java:85)
+	at com.DemoPos.Script.RolesTest.verifyDeleteRole(RolesTest.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(For checking valid login Scenario)                  </em>
+(Verify Delete Role)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.DemoPos.Script.UsersTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyenterFirstName">
+                  </a> <!-- verifyenterFirstName -->
+                  <span class="method-name">verifyenterFirstName</span>
+                  <em>
+(Verify user is able add details)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.DemoPos.Script.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySigninInvalidUserInvalidpass(riya, 1223)">
+                  </a> <!-- verifySigninInvalidUserInvalidpass(riya, 1223) -->
+                  <span class="method-name">verifySigninInvalidUserInvalidpass</span>
+                  <span class="parameters">(riya,1223)</span>
+                  <em>
+(Verify  checking of invalid login Scenario)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySigninInvalidUserValidpass(rynku, 123123)">
+                  </a> <!-- verifySigninInvalidUserValidpass(rynku, 123123) -->
+                  <span class="method-name">verifySigninInvalidUserValidpass</span>
+                  <span class="parameters">(rynku,123123)</span>
+                  <em>
+(Verify checking invalid login Scenario)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySigninValidUserInvalidpass(admin, 10)">
+                  </a> <!-- verifySigninValidUserInvalidpass(admin, 10) -->
+                  <span class="method-name">verifySigninValidUserInvalidpass</span>
+                  <span class="parameters">(admin,10)</span>
+                  <em>
+(Verify checking invalid login Scenario)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySigninValidUserValidpass(admin, 123123)">
+                  </a> <!-- verifySigninValidUserValidpass(admin, 123123) -->
+                  <span class="method-name">verifySigninValidUserValidpass</span>
+                  <span class="parameters">(admin,123123)</span>
+                  <em>
+(Verify checking valid login Scenario)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.DemoPos.Script.ContactsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyEditCostumerGroup">
+                  </a> <!-- verifyEditCostumerGroup -->
+                  <span class="method-name">verifyEditCostumerGroup</span>
+                  <em>
+(Verify Edit Customer Group)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyFileUpload">
+                  </a> <!-- verifyFileUpload -->
+                  <span class="method-name">verifyFileUpload</span>
+                  <em>
+(Verify the File upload)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.DemoPos.Script.HomeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPurchasePaymentDueList">
+                  </a> <!-- verifyPurchasePaymentDueList -->
+                  <span class="method-name">verifyPurchasePaymentDueList</span>
+                  <em>
+(Verify  the Supplier in Purchase Payment Due)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.DemoPos.Script.RolesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyAddNewRole">
+                  </a> <!-- verifyAddNewRole -->
+                  <span class="method-name">verifyAddNewRole</span>
+                  <em>
+(Verify add New Role)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyDeleteRole">
+                  </a> <!-- verifyDeleteRole -->
+                  <span class="method-name">verifyDeleteRole</span>
+                  <em>
+(Verify Delete Role)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\aibin\eclipse-workspace\DemoPos\grouping.xml</span>
+            <span class="header-content">C:\Users\aibin\eclipse-workspace\DemoPos\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.DemoPos.Listeners.TestListeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;groups&gt;
-      &lt;run&gt;
-        &lt;include name=&quot;smoke&quot;/&gt;
-      &lt;/run&gt;
-    &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.DemoPos.Script.LoginTest&quot;/&gt;
       &lt;class name=&quot;com.DemoPos.Script.HomeTest&quot;/&gt;
+      &lt;class name=&quot;com.DemoPos.Script.UsersTest&quot;/&gt;
+      &lt;class name=&quot;com.DemoPos.Script.RolesTest&quot;/&gt;
+      &lt;class name=&quot;com.DemoPos.Script.ContactsTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -198,7 +387,7 @@ Session ID: a8e9051987e655c5c7f2dab89d8ae1b6
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -212,7 +401,19 @@ Session ID: a8e9051987e655c5c7f2dab89d8ae1b6
               <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">verifyAddNewRole</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyDeleteRole</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">verifySigninValidUserValidpass</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyenterFirstName</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -232,16 +433,56 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifySigninValidUserValidpass')
-data.setCell(0, 2, 'com.DemoPos.Script.LoginTest')
-data.setCell(0, 3, 10747);
+data.setCell(0, 1, 'verifyAddNewRole')
+data.setCell(0, 2, 'com.DemoPos.Script.RolesTest')
+data.setCell(0, 3, 6606);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyenterFirstName')
+data.setCell(1, 2, 'com.DemoPos.Script.UsersTest')
+data.setCell(1, 3, 5720);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyFileUpload')
+data.setCell(2, 2, 'com.DemoPos.Script.ContactsTest')
+data.setCell(2, 3, 2612);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyEditCostumerGroup')
+data.setCell(3, 2, 'com.DemoPos.Script.ContactsTest')
+data.setCell(3, 3, 2537);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifySigninValidUserValidpass')
+data.setCell(4, 2, 'com.DemoPos.Script.LoginTest')
+data.setCell(4, 3, 2354);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyDeleteRole')
+data.setCell(5, 2, 'com.DemoPos.Script.RolesTest')
+data.setCell(5, 3, 1927);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyDeleteRole')
+data.setCell(6, 2, 'com.DemoPos.Script.RolesTest')
+data.setCell(6, 3, 1765);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verifySigninInvalidUserInvalidpass')
+data.setCell(7, 2, 'com.DemoPos.Script.LoginTest')
+data.setCell(7, 3, 651);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verifySigninValidUserInvalidpass')
+data.setCell(8, 2, 'com.DemoPos.Script.LoginTest')
+data.setCell(8, 3, 567);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verifySigninInvalidUserValidpass')
+data.setCell(9, 2, 'com.DemoPos.Script.LoginTest')
+data.setCell(9, 3, 535);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verifyPurchasePaymentDueList')
+data.setCell(10, 2, 'com.DemoPos.Script.HomeTest')
+data.setCell(10, 3, 426);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 25 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -256,28 +497,42 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">6 ignored methods</span>
+            <span class="header-content">8 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.DemoPos.Script.LoginTest</span>
+              <span class="ignored-class-name">com.DemoPos.Script.UsersTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifySigninInvalidUserValidpass</span>
+                <span class="ignored-method-name">afterTest</span>
                 <br/>
-                <span class="ignored-method-name">verifySigninValidUserInvalidpass</span>
+                <span class="ignored-method-name">beforeTest</span>
                 <br/>
-                <span class="ignored-method-name">verifySigninInvalidUserInvalidpass</span>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.DemoPos.Script.ContactsTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">afterTest</span>
+                <br/>
+                <span class="ignored-method-name">beforeTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.DemoPos.Script.HomeTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyPrintPdroctStockAlert</span>
-                <br/>
-                <span class="ignored-method-name">verifyScroll</span>
+                <span class="ignored-method-name">afterTest</span>
                 <br/>
                 <span class="ignored-method-name">beforeTest</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.DemoPos.Script.RolesTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeTest</span>
+                <br/>
+                <span class="ignored-method-name">afterTest</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -295,14 +550,122 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifySigninValidUserValidpass(admin, 123123)</span>
-                <span class="method-start">7928 ms</span>
+                <span class="method-name">verifySigninInvalidUserInvalidpass(riya, 1223)</span>
+                <span class="method-start">7402 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenShotOnFailure([TestResult name=verifySigninInvalidUserInvalidpass status=SUCCESS method=LoginTest.verifySigninInva...)</span>
+                <span class="method-start">8059 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifySigninInvalidUserValidpass(rynku, 123123)</span>
+                <span class="method-start">8096 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenShotOnFailure([TestResult name=verifySigninInvalidUserValidpass status=SUCCESS method=LoginTest.verifySigninInvali...)</span>
+                <span class="method-start">8632 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifySigninValidUserInvalidpass(admin, 10)</span>
+                <span class="method-start">8662 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenShotOnFailure([TestResult name=verifySigninValidUserInvalidpass status=SUCCESS method=LoginTest.verifySigninValidU...)</span>
+                <span class="method-start">9230 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifySigninValidUserValidpass(admin, 123123)</span>
+                <span class="method-start">9265 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenShotOnFailure([TestResult name=verifySigninValidUserValidpass status=SUCCESS method=LoginTest.verifySigninValidUse...)</span>
+                <span class="method-start">11620 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.DemoPos.Script.HomeTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyPurchasePaymentDueList</span>
+                <span class="method-start">11623 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenShotOnFailure([TestResult name=verifyPurchasePaymentDueList status=SUCCESS method=HomeTest.verifyPurchasePaymentDu...)</span>
+                <span class="method-start">12050 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.DemoPos.Script.UsersTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyenterFirstName</span>
+                <span class="method-start">12052 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenShotOnFailure([TestResult name=verifyenterFirstName status=SUCCESS method=UsersTest.verifyenterFirstName()[pri:6, ...)</span>
+                <span class="method-start">17773 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.DemoPos.Script.RolesTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyAddNewRole</span>
+                <span class="method-start">17774 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenShotOnFailure([TestResult name=verifyAddNewRole status=SUCCESS method=RolesTest.verifyAddNewRole()[pri:7, instance...)</span>
+                <span class="method-start">24381 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyDeleteRole</span>
+                <span class="method-start">24382 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenShotOnFailure([TestResult name=verifyDeleteRole status=SKIP method=RolesTest.verifyDeleteRole()[pri:8, instance:co...)</span>
+                <span class="method-start">26313 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyDeleteRole</span>
+                <span class="method-start">26313 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.DemoPos.Script.ContactsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyEditCostumerGroup</span>
+                <span class="method-start">28079 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.DemoPos.Script.RolesTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenShotOnFailure([TestResult name=verifyDeleteRole status=SUCCESS method=RolesTest.verifyDeleteRole()[pri:8, instance...)</span>
+                <span class="method-start">28079 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.DemoPos.Script.ContactsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenShotOnFailure([TestResult name=verifyEditCostumerGroup status=SUCCESS method=ContactsTest.verifyEditCostumerGroup(...)</span>
+                <span class="method-start">30618 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">verifyFileUpload</span>
+                <span class="method-start">30620 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenShotOnFailure([TestResult name=verifyFileUpload status=SUCCESS method=ContactsTest.verifyFileUpload()[pri:10, inst...)</span>
+                <span class="method-start">33233 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.DemoPos.Script.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">33234 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

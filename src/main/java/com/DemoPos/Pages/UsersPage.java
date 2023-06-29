@@ -10,83 +10,72 @@ import org.testng.annotations.Test;
 
 import com.DemoPos.Utilities.PageUtilities;
 import com.DemoPos.Utilities.RandomUtilities;
-import com.DemoPos.Utilities.ScreenshotUtilities;
 import com.DemoPos.Utilities.WaitUtilities;
 
 public class UsersPage {
-  public WebDriver driver;
-  
-  
-  @FindBy(xpath="//*[contains(text(),'User Management')]")
-  WebElement userManagement;
-  
-  
-  @FindBy(xpath="//*[contains(text(),'Users')]")
-  WebElement users;
-  
-  @FindBy(xpath="//a[@class='btn btn-block btn-primary']")
-  WebElement add;
-  
-  @FindBy(id="first_name")
-  WebElement firstName;
+	public WebDriver driver;
 
-  @FindBy(id="role")
-  WebElement roleDrp;
+	@FindBy(xpath = "//*[contains(text(),'User Management')]")
+	WebElement userManagement;
 
-  @FindBy(xpath="//h1[contains(text(),'Add user')]")
-  WebElement addUser;
-  
-  
-  
-  public UsersPage(WebDriver driver) {
+	@FindBy(xpath = "//*[contains(text(),'Users')]")
+	WebElement users;
+
+	@FindBy(xpath = "//div[@class='dataTables_info' and @id='users_table_info']")
+	WebElement totalPage;
+
+	@FindBy(xpath = "//a[@class='btn btn-block btn-primary']")
+	WebElement add;
+
+	@FindBy(id = "first_name")
+	WebElement firstName;
+
+	@FindBy(id = "email")
+	WebElement emailElement;
+
+	@FindBy(id = "password")
+	WebElement passwordElement;
+
+	@FindBy(id = "confirm_password")
+	WebElement passwordElement2;
+
+	@FindBy(id = "submit_user_button")
+	WebElement saveBtn;
+
+	@FindBy(id = "role")
+	WebElement roleDrp;
+
+	@FindBy(xpath = "//h1[contains(text(),'Add user')]")
+	WebElement addUser;
+	
+	@FindBy(id = "toast-container")
+	WebElement addMsg;
+	
+	public UsersPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-  
-  public boolean clickUserManagement() throws IOException {
-	  userManagement.click();
-	  //ScreenshotUtilities.screenshotOfElement(users);
-	  WaitUtilities.waitForElementToBeClickable(driver, users);
-	  users.click();
-	return true;
+	public String userAddMessage() {
+		String message = addMsg.getText();
+		return message;
 	}
-  public void clickAdd()
-  {
-	  WaitUtilities.waitForElementToBeClickable(driver, add);
-	  add.click();
-	  
-	  }
-  public String addUser()
-  {
-    String add=addUser.getText();
-    return add;
-  }
 
-public boolean enterFirstName(String firstName2) {
-	firstName.sendKeys(firstName2);
-	boolean first=firstName.isDisplayed();
-	return first;
-	
-}
- 
+	public boolean enterFirstName(String firstName2, String email2, String testPassword2, int role2) {
+		userManagement.click();
+		WaitUtilities.waitForElementToBeClickable(driver, users);
+		users.click();
+		totalPage.click();
+		WaitUtilities.waitForElementToBeClickable(driver, add);
+		add.click();
+		firstName.sendKeys(firstName2);
+		emailElement.sendKeys(email2);
+		PageUtilities.selectClassDropdown(roleDrp, role2);
 
+		passwordElement.sendKeys(testPassword2);
+		passwordElement2.sendKeys(testPassword2);
+		saveBtn.click();
+		return true;
 
-
-
-
-
-
-
-
-
-
-
-public boolean selectRole(int value)
-{
-	//PageUtilities.selectClassDropdown(driver, roleDrp).selectByIndex(value);
-	boolean role=roleDrp.isDisplayed();
-	return role;
-}
-
+	}
 
 }

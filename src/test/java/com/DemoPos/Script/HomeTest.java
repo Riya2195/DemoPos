@@ -10,20 +10,13 @@ import com.DemoPos.Pages.LoginPage;
 public class HomeTest extends TestBase {
 	HomePage objHome;
 
-	@Test(priority = 5,description="Verify the working of scrolling")
-	public void verifyScroll() {
-		objHome = new HomePage(driver);
-		boolean assert5=objHome.verifyScrollParticularElement();
-		
-		Assert.assertTrue(assert5);
-    }
+
 	
-	@Test(priority = 6,description="Verify  the Produst stock alert in console")
-	public void verifyPrintPdroctStockAlert() {
+	@Test(priority = 5,description="Verify  the Supplier in Purchase Payment Due")
+	public void verifyPurchasePaymentDueList() {
 		objHome = new HomePage(driver);
-		boolean assert6=objHome.ProductStockAlertlist();
+		boolean assert6=objHome.purchasePaymentDueList();
 		Assert.assertTrue(assert6);
-    }
-	
-	
+	}
+
 }

@@ -15,38 +15,17 @@ public class UsersTest extends TestBase {
 
 	UsersPage objUsers;
 
-	@Test(priority = 6,description="Verify the User Management")
-	public void verifyClickUserMnagement() throws IOException {
-    objUsers = new UsersPage(driver);
-    boolean assert6=objUsers.clickUserManagement();
-    Assert.assertTrue(assert6);
-    
-    }
-	
-	@Test(priority = 7,description="Verify the Add button in User Management")
-	public void verifyAddUser() {
-    objUsers = new UsersPage(driver);
-    objUsers.clickAdd();
-    Assert.assertEquals(objUsers.addUser(), Constants.ADDUSER);
-    }
-	
-	@Test(priority = 8,description="Verify user is able to first name")
+	@Test(priority = 6, description = "Verify user is able add details", groups = { "smoke" })
 	public void verifyenterFirstName() {
-	    objUsers = new UsersPage(driver);
-	    String firstName=RandomUtilities.getfName();
-	    boolean assert8=objUsers.enterFirstName(firstName);
-	    Assert.assertTrue(assert8);
+		objUsers = new UsersPage(driver);
+		String firstName = RandomUtilities.getfName();
+		String email = RandomUtilities.getRandomEmail();
+		RandomUtilities.getusername();
+		String testPassword = RandomUtilities.getpassword();
+		int role = 4;
+		boolean assert6 = objUsers.enterFirstName(firstName, email, testPassword, role);
+		Assert.assertEquals(objUsers.userAddMessage(), Constants.USERSUCCESSMESSAGE);
 
-	    }
-	
-	
-	@Test(priority = 9,description="Verify user able to enter Role for the user")
-	public void verifyRoleSelection() {
-	    objUsers = new UsersPage(driver);
-	    boolean assert9=objUsers.selectRole(4);
-	    Assert.assertTrue(assert9);
-	    }
-
-	
+	}
 
 }

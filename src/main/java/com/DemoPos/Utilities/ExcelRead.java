@@ -13,47 +13,47 @@ import com.DemoPos.Constants.Constants;
 
 public class ExcelRead {
 
-
 	public static FileInputStream f;
 	public static XSSFWorkbook w;
 	public static XSSFSheet sh;
-public static String getCellStringData(int RowNum, int ColNum,String Sheet)  {
-		
+
+	public static String getCellStringData(int RowNum, int ColNum, String Sheet) {
+
 		try {
 			System.out.println(Constants.CONFIGPATH_EXCELREADER);
-			f=new FileInputStream(Constants.CONFIGPATH_EXCELREADER);
-			
+			f = new FileInputStream(Constants.CONFIGPATH_EXCELREADER);
+
 		} catch (FileNotFoundException e) {
-			 throw new RuntimeException(e);
+			throw new RuntimeException(e);
 		}
 		try {
-			w=new XSSFWorkbook(f);
+			w = new XSSFWorkbook(f);
 		} catch (IOException e) {
-	           throw new RuntimeException(e);
+			throw new RuntimeException(e);
 		}
-		sh=w.getSheet(Sheet);
-Row r=sh.getRow(RowNum)	;
-Cell c=r.getCell(ColNum);
-System.out.println(c);
-return c.getStringCellValue();
+		sh = w.getSheet(Sheet);
+		Row r = sh.getRow(RowNum);
+		Cell c = r.getCell(ColNum);
+		System.out.println(c);
+		return c.getStringCellValue();
 //return String.valueOf(c);
-}
-public static int getCellNumericData(int RowNum, int ColNum,String Sheet) 
-{
-	try {
-		f=new FileInputStream(Constants.CONFIGPATH_EXCELREADER);
-	} catch (FileNotFoundException e) {
-           throw new RuntimeException(e);
 	}
 
-	try {
-		w= new XSSFWorkbook(f);
-	} catch (IOException e) {
-           throw new RuntimeException(e);
+	public static int getCellNumericData(int RowNum, int ColNum, String Sheet) {
+		try {
+			f = new FileInputStream(Constants.CONFIGPATH_EXCELREADER);
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+
+		try {
+			w = new XSSFWorkbook(f);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		sh = w.getSheet(Sheet);
+		return (int) sh.getRow(RowNum).getCell(ColNum).getNumericCellValue();
+
 	}
-	sh=w.getSheet(Sheet);
-	return (int) sh.getRow(RowNum).getCell(ColNum).getNumericCellValue();
-	
-}
 
 }

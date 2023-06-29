@@ -1,16 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results retried="1" ignored="1" total="12" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="18696" started-at="2023-06-23T13:20:41Z" finished-at="2023-06-23T13:21:00Z">
+  <suite started-at="2023-06-29T19:44:06 IST" name="Suite" finished-at="2023-06-29T19:44:40 IST" duration-ms="33245">
     <groups>
       <group name="smoke">
-        <method signature="LoginTest.verifySigninValidUserValidpass(java.lang.String, int)[pri:4, instance:com.DemoPos.Script.LoginTest@58fdd99]" name="verifySigninValidUserValidpass" class="com.DemoPos.Script.LoginTest"/>
+        <method signature="LoginTest.verifySigninValidUserValidpass(java.lang.String,int)[pri:4, instance:com.DemoPos.Script.LoginTest@2c78d320]" name="verifySigninValidUserValidpass" class="com.DemoPos.Script.LoginTest"/>
+        <method signature="UsersTest.verifyenterFirstName()[pri:6, instance:com.DemoPos.Script.UsersTest@7c8c9a05]" name="verifyenterFirstName" class="com.DemoPos.Script.UsersTest"/>
+        <method signature="RolesTest.verifyAddNewRole()[pri:7, instance:com.DemoPos.Script.RolesTest@d41f816]" name="verifyAddNewRole" class="com.DemoPos.Script.RolesTest"/>
+        <method signature="RolesTest.verifyDeleteRole()[pri:8, instance:com.DemoPos.Script.RolesTest@d41f816]" name="verifyDeleteRole" class="com.DemoPos.Script.RolesTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Test" duration-ms="18696" started-at="2023-06-23T13:20:41Z" finished-at="2023-06-23T13:21:00Z">
+    <test started-at="2023-06-29T19:44:06 IST" name="Test" finished-at="2023-06-29T19:44:40 IST" duration-ms="33245">
+      <class name="com.DemoPos.Script.ContactsTest">
+        <test-method signature="verifyEditCostumerGroup()[pri:9, instance:com.DemoPos.Script.ContactsTest@5c2375a9]" started-at="2023-06-29T19:44:35 IST" name="verifyEditCostumerGroup" description="Verify Edit Customer Group" finished-at="2023-06-29T19:44:37 IST" duration-ms="2537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEditCostumerGroup -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.DemoPos.Script.ContactsTest@5c2375a9]" started-at="2023-06-29T19:44:37 IST" name="takeScreenShotOnFailure" finished-at="2023-06-29T19:44:37 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyEditCostumerGroup status=SUCCESS method=ContactsTest.verifyEditCostumerGroup()[pri:9, instance:com.DemoPos.Script.ContactsTest@5c2375a9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method signature="verifyFileUpload()[pri:10, instance:com.DemoPos.Script.ContactsTest@5c2375a9]" started-at="2023-06-29T19:44:37 IST" name="verifyFileUpload" description="Verify the File upload" finished-at="2023-06-29T19:44:40 IST" duration-ms="2612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFileUpload -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.DemoPos.Script.ContactsTest@5c2375a9]" started-at="2023-06-29T19:44:40 IST" name="takeScreenShotOnFailure" finished-at="2023-06-29T19:44:40 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyFileUpload status=SUCCESS method=ContactsTest.verifyFileUpload()[pri:10, instance:com.DemoPos.Script.ContactsTest@5c2375a9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+      </class> <!-- com.DemoPos.Script.ContactsTest -->
+      <class name="com.DemoPos.Script.HomeTest">
+        <test-method signature="verifyPurchasePaymentDueList()[pri:5, instance:com.DemoPos.Script.HomeTest@600b90df]" started-at="2023-06-29T19:44:18 IST" name="verifyPurchasePaymentDueList" description="Verify  the Supplier in Purchase Payment Due" finished-at="2023-06-29T19:44:18 IST" duration-ms="426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPurchasePaymentDueList -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.DemoPos.Script.HomeTest@600b90df]" started-at="2023-06-29T19:44:18 IST" name="takeScreenShotOnFailure" finished-at="2023-06-29T19:44:18 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPurchasePaymentDueList status=SUCCESS method=HomeTest.verifyPurchasePaymentDueList()[pri:5, instance:com.DemoPos.Script.HomeTest@600b90df] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+      </class> <!-- com.DemoPos.Script.HomeTest -->
       <class name="com.DemoPos.Script.LoginTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.DemoPos.Script.LoginTest@58fdd99]" name="beforeTest" is-config="true" duration-ms="7443" started-at="2023-06-23T18:50:41Z" finished-at="2023-06-23T18:50:49Z">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:com.DemoPos.Script.LoginTest@2c78d320]" started-at="2023-06-29T19:44:06 IST" name="beforeTest" finished-at="2023-06-29T19:44:14 IST" duration-ms="7064" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,7 +73,88 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="FAIL" signature="verifySigninValidUserValidpass(java.lang.String, int)[pri:4, instance:com.DemoPos.Script.LoginTest@58fdd99]" name="verifySigninValidUserValidpass" duration-ms="10747" started-at="2023-06-23T18:50:49Z" description="For checking valid login Scenario" data-provider="validUservalidPassword" finished-at="2023-06-23T18:51:00Z">
+        <test-method signature="verifySigninInvalidUserInvalidpass(java.lang.String,int)[pri:1, instance:com.DemoPos.Script.LoginTest@2c78d320]" started-at="2023-06-29T19:44:14 IST" name="verifySigninInvalidUserInvalidpass" description="Verify  checking of invalid login Scenario" data-provider="invalidUserInvalidPassword" finished-at="2023-06-29T19:44:14 IST" duration-ms="651" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[riya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1223]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySigninInvalidUserInvalidpass -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.DemoPos.Script.LoginTest@2c78d320]" started-at="2023-06-29T19:44:14 IST" name="takeScreenShotOnFailure" finished-at="2023-06-29T19:44:15 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySigninInvalidUserInvalidpass status=SUCCESS method=LoginTest.verifySigninInvalidUserInvalidpass(java.lang.String,int)[pri:1, instance:com.DemoPos.Script.LoginTest@2c78d320] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method signature="verifySigninInvalidUserValidpass(java.lang.String,int)[pri:2, instance:com.DemoPos.Script.LoginTest@2c78d320]" started-at="2023-06-29T19:44:15 IST" name="verifySigninInvalidUserValidpass" description="Verify checking invalid login Scenario" data-provider="invalidUservalidPassword" finished-at="2023-06-29T19:44:15 IST" duration-ms="535" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rynku]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySigninInvalidUserValidpass -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.DemoPos.Script.LoginTest@2c78d320]" started-at="2023-06-29T19:44:15 IST" name="takeScreenShotOnFailure" finished-at="2023-06-29T19:44:15 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySigninInvalidUserValidpass status=SUCCESS method=LoginTest.verifySigninInvalidUserValidpass(java.lang.String,int)[pri:2, instance:com.DemoPos.Script.LoginTest@2c78d320] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method signature="verifySigninValidUserInvalidpass(java.lang.String,int)[pri:3, instance:com.DemoPos.Script.LoginTest@2c78d320]" started-at="2023-06-29T19:44:15 IST" name="verifySigninValidUserInvalidpass" description="Verify checking invalid login Scenario" data-provider="validUserInvalidPassword" finished-at="2023-06-29T19:44:16 IST" duration-ms="567" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySigninValidUserInvalidpass -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.DemoPos.Script.LoginTest@2c78d320]" started-at="2023-06-29T19:44:16 IST" name="takeScreenShotOnFailure" finished-at="2023-06-29T19:44:16 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySigninValidUserInvalidpass status=SUCCESS method=LoginTest.verifySigninValidUserInvalidpass(java.lang.String,int)[pri:3, instance:com.DemoPos.Script.LoginTest@2c78d320] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method signature="verifySigninValidUserValidpass(java.lang.String,int)[pri:4, instance:com.DemoPos.Script.LoginTest@2c78d320]" started-at="2023-06-29T19:44:16 IST" name="verifySigninValidUserValidpass" description="Verify checking valid login Scenario" data-provider="validUservalidPassword" finished-at="2023-06-29T19:44:18 IST" duration-ms="2354" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,80 +167,160 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Welcome admin,')]"}
-  (Session info: chrome=114.0.5735.134)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.9.0', revision: 'd7057100a6'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_361'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8e9051987e655c5c7f2dab89d8ae1b6, findElement {using=xpath, value=//*[contains(text(),'Welcome admin,')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\aibin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61103}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61103/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8e9051987e655c5c7f2dab89d8ae1b6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Welcome admin,')]"}
-  (Session info: chrome=114.0.5735.134)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.9.0', revision: 'd7057100a6'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_361'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8e9051987e655c5c7f2dab89d8ae1b6, findElement {using=xpath, value=//*[contains(text(),'Welcome admin,')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\aibin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61103}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61103/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a8e9051987e655c5c7f2dab89d8ae1b6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy17.getText(Unknown Source)
-	at com.DemoPos.Pages.LoginPage.welcomeMessage(LoginPage.java:54)
-	at com.DemoPos.Script.LoginTest.verifySigninValidUserValidpass(LoginTest.java:67)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:778)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
-	at org.testng.TestNG.runSuites(TestNG.java:1075)
-	at org.testng.TestNG.run(TestNG.java:1047)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySigninValidUserValidpass -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.DemoPos.Script.LoginTest@2c78d320]" started-at="2023-06-29T19:44:18 IST" name="takeScreenShotOnFailure" finished-at="2023-06-29T19:44:18 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySigninValidUserValidpass status=SUCCESS method=LoginTest.verifySigninValidUserValidpass(java.lang.String,int)[pri:4, instance:com.DemoPos.Script.LoginTest@2c78d320] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.DemoPos.Script.LoginTest@2c78d320]" started-at="2023-06-29T19:44:40 IST" name="afterTest" finished-at="2023-06-29T19:44:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- com.DemoPos.Script.LoginTest -->
+      <class name="com.DemoPos.Script.RolesTest">
+        <test-method signature="verifyAddNewRole()[pri:7, instance:com.DemoPos.Script.RolesTest@d41f816]" started-at="2023-06-29T19:44:24 IST" name="verifyAddNewRole" description="Verify add New Role" finished-at="2023-06-29T19:44:31 IST" duration-ms="6606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddNewRole -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.DemoPos.Script.RolesTest@d41f816]" started-at="2023-06-29T19:44:31 IST" name="takeScreenShotOnFailure" finished-at="2023-06-29T19:44:31 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAddNewRole status=SUCCESS method=RolesTest.verifyAddNewRole()[pri:7, instance:com.DemoPos.Script.RolesTest@d41f816] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method retried="true" signature="verifyDeleteRole()[pri:8, instance:com.DemoPos.Script.RolesTest@d41f816]" started-at="2023-06-29T19:44:31 IST" name="verifyDeleteRole" description="Verify Delete Role" finished-at="2023-06-29T19:44:33 IST" duration-ms="1927" status="SKIP">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [778150e6fd286fa990f35144b19eb072, getElementText {id=899537EE28FEF61A2544D3DA42C3A6DF_element_396}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:63790}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63790/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on WINDOWS (778150e6fd286fa990f35144b19eb072)] -> xpath: //table[@id="roles_table"]/tbody/tr]] -> tag name: td]
+Session ID: 778150e6fd286fa990f35144b19eb072]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=114.0.5735.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.9.0', revision: 'd7057100a6'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [778150e6fd286fa990f35144b19eb072, getElementText {id=899537EE28FEF61A2544D3DA42C3A6DF_element_396}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:63790}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63790/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[[[ChromeDriver: chrome on WINDOWS (778150e6fd286fa990f35144b19eb072)] -> xpath: //table[@id="roles_table"]/tbody/tr]] -> tag name: td]
+Session ID: 778150e6fd286fa990f35144b19eb072
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:207)
+at com.DemoPos.Utilities.WebTableUtilities.webTableHandleDeleteElement(WebTableUtilities.java:33)
+at com.DemoPos.Pages.RolesPage.deleteRole(RolesPage.java:85)
+at com.DemoPos.Script.RolesTest.verifyDeleteRole(RolesTest.java:30)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeleteRole -->
+        <test-method signature="verifyDeleteRole()[pri:8, instance:com.DemoPos.Script.RolesTest@d41f816]" started-at="2023-06-29T19:44:33 IST" name="verifyDeleteRole" description="Verify Delete Role" finished-at="2023-06-29T19:44:35 IST" duration-ms="1765" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeleteRole -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.DemoPos.Script.RolesTest@d41f816]" started-at="2023-06-29T19:44:33 IST" name="takeScreenShotOnFailure" finished-at="2023-06-29T19:44:33 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyDeleteRole status=SKIP method=RolesTest.verifyDeleteRole()[pri:8, instance:com.DemoPos.Script.RolesTest@d41f816] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.DemoPos.Script.RolesTest@d41f816]" started-at="2023-06-29T19:44:35 IST" name="takeScreenShotOnFailure" finished-at="2023-06-29T19:44:35 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyDeleteRole status=SUCCESS method=RolesTest.verifyDeleteRole()[pri:8, instance:com.DemoPos.Script.RolesTest@d41f816] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+      </class> <!-- com.DemoPos.Script.RolesTest -->
+      <class name="com.DemoPos.Script.UsersTest">
+        <test-method signature="verifyenterFirstName()[pri:6, instance:com.DemoPos.Script.UsersTest@7c8c9a05]" started-at="2023-06-29T19:44:18 IST" name="verifyenterFirstName" description="Verify user is able add details" finished-at="2023-06-29T19:44:24 IST" duration-ms="5720" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyenterFirstName -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.DemoPos.Script.UsersTest@7c8c9a05]" started-at="2023-06-29T19:44:24 IST" name="takeScreenShotOnFailure" finished-at="2023-06-29T19:44:24 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyenterFirstName status=SUCCESS method=UsersTest.verifyenterFirstName()[pri:6, instance:com.DemoPos.Script.UsersTest@7c8c9a05] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+      </class> <!-- com.DemoPos.Script.UsersTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

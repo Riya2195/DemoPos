@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<listeners>
+	<listeners>
 		<listener class-name="com.DemoPos.Listeners.TestListeners"></listener>
 	</listeners>
-  <test name="Test">
-  	  	  <parameter name="browser" value="chrome"></parameter>
-  
-	  <groups>
-  <run>
-  <include name="smoke"/>
-  </run>
-  </groups>
-    <classes>
-      <class name="com.DemoPos.Script.LoginTest"/>
-            <class name="com.DemoPos.Script.HomeTest"/>
-      
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<test name="Test">
+		<parameter name="browser" value="chrome"></parameter>
+
+		<groups>
+			<run>
+				<include name="smoke" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.DemoPos.Script.LoginTest" />
+			<class name="com.DemoPos.Script.UsersTest" />
+			<class name="com.DemoPos.Script.RolesTest" />
+
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

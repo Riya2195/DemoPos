@@ -36,7 +36,6 @@ public class TestBase {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
 					System.getProperty("user.dir") + "\\src\\main\\resources" + "\\config.properties");
-//user.dir---means reached upto PageObjectModel
 			prop.load(ip);
 
 		} catch (FileNotFoundException e) {
@@ -92,7 +91,7 @@ public class TestBase {
 
 	@AfterTest
 	public void afterTest() {
-		driver.close();
+		//driver.close();
 		
 	}
 
