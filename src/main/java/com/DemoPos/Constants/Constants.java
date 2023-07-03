@@ -17,6 +17,7 @@ public class Constants {
     public static final String ROLEDELETEDMESSAGE="Role deleted successfully";
     public static final String CALCULATEPERCENTAGE="20";
     public static final String CUSTOMERGROUPUPDATEMESSAGE="Success";
+    public static final int ROLE=4;
 
 
 

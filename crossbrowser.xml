@@ -3,11 +3,41 @@
 <suite name="Suite">
  
 
-	<test thread-count="5" name="Test">
+	<test thread-count="5" name="Test1">
 		<parameter name="browser" value="chrome"></parameter>
 		
     <classes>
-      <class name="com.DemoPos.Base.TestBase"/>
+	<class name="com.DemoPos.Script.LoginTest" />
+
+			<class name="com.DemoPos.Script.HomeTest" />
+			<class name="com.DemoPos.Script.UsersTest" />
+			<class name="com.DemoPos.Script.RolesTest" />
+			<class name="com.DemoPos.Script.ContactsTest" />
     </classes>
   </test> <!-- Test -->
+  <test thread-count="5" name="Test2">
+		<parameter name="browser" value="edge"></parameter>
+		
+    <classes>
+	<class name="com.DemoPos.Script.LoginTest" />
+
+			<class name="com.DemoPos.Script.HomeTest" />
+			<class name="com.DemoPos.Script.UsersTest" />
+			<class name="com.DemoPos.Script.RolesTest" />
+			<class name="com.DemoPos.Script.ContactsTest" />
+    </classes>
+  </test> <!-- Test -->
+   <test thread-count="5" name="Test3">
+		<parameter name="browser" value="gecko"></parameter>
+		
+    <classes>
+	<class name="com.DemoPos.Script.LoginTest" />
+
+			<class name="com.DemoPos.Script.HomeTest" />
+			<class name="com.DemoPos.Script.UsersTest" />
+			<class name="com.DemoPos.Script.RolesTest" />
+			<class name="com.DemoPos.Script.ContactsTest" />
+    </classes>
+  </test> <!-- Test -->
+  
 </suite> <!-- Suite -->

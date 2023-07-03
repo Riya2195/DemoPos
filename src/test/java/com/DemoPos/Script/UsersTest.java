@@ -22,8 +22,7 @@ public class UsersTest extends TestBase {
 		String email = RandomUtilities.getRandomEmail();
 		RandomUtilities.getusername();
 		String testPassword = RandomUtilities.getpassword();
-		int role = 4;
-		boolean assert6 = objUsers.enterFirstName(firstName, email, testPassword, role);
+		boolean assert6 = objUsers.enterFirstName(firstName, email, testPassword, Constants.ROLE);
 		Assert.assertEquals(objUsers.userAddMessage(), Constants.USERSUCCESSMESSAGE);
 
 	}

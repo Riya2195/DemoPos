@@ -24,13 +24,12 @@ public class RolesTest extends TestBase {
 	}
 	
 	@Test(priority = 8,description="Verify Delete Role",groups = {"smoke"},retryAnalyzer = com.DemoPos.Listeners.RetryAnalyzer.class)
-	public void verifyDeleteRole() {
+public void verifyDeleteRole() {
 		
 		objRoles = new RolesPage(driver);
 		boolean assert8=objRoles.deleteRole();
 		Assert.assertFalse(assert8);
 
 	}
-	
 	
 }

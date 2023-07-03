@@ -91,7 +91,7 @@ public class TestBase {
 
 	@AfterTest
 	public void afterTest() {
-		//driver.close();
+		driver.close();
 		
 	}
 

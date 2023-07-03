@@ -52,7 +52,7 @@ public class ContactsPage {
 		importContacts.click();
 		chooseFile.sendKeys(Constants.CONFIGPATH_EXCELREADER);
 		submit.click();
-		Boolean messageTxt = messageText.isDisplayed();
+		Boolean messageTxt = messageText.isDisplayed();//wrong
 		return messageTxt;
 	}
 
@@ -67,7 +67,7 @@ public class ContactsPage {
 	}
 
 	public String customerGroupUpdateMessage() {
-		String message = success.getText();
+		String message = success.getText();//verify edited data-
 		WaitUtilities.waitForElementToBeVisible(driver, success);
 		return message;
 	}

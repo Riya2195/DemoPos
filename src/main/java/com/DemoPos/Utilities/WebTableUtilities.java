@@ -23,7 +23,6 @@ public class WebTableUtilities {
 		}
 		return verifyElement;
 	}
-
 	public static boolean webTableHandleDeleteElement(List<WebElement> rawlist, List<WebElement> columnList,
 			String tagNameValue, String checkValue) {
 		boolean verifyElement = false;
@@ -41,4 +40,5 @@ public class WebTableUtilities {
 		}
 		return verifyElement;
 	}
+	
 }
